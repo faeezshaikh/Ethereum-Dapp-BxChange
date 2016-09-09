@@ -35,7 +35,7 @@ module.exports = {
     // "bootstrap-theme.min.css" : [
     //   "stylesheets/bootstrap-theme.min.css"
     //   ],
-    "images/": "images/",
+    // "images/": "images/",
     "fonts/": "fonts/"
   },
   rpc: {
