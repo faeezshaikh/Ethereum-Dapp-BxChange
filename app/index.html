@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>MetaCoin - Default Truffle App</title>
+  <!--<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>-->
+  <!--<link href="./app.css" rel='stylesheet' type='text/css'>-->
+  <script src="./app.js"></script>
+  <!--<link rel="stylesheet" href="./bootstrap.min.css">
+  <link rel="stylesheet" href="./bootstrap-theme.min.css">-->
+  <link rel="stylesheet" href="./ionic.app.css">
+
+  <!--<script src="./jquery-3.1.0.min.js"></script>-->
+  <script src="./ionic.bundle.js"></script>
+  <!--<script src="./bootstrap.min.js"></script>-->
+</head>
+
+<body>
+  <!--<div class="list">-->
+    <div class="bar bar-header bar-positive">
+      <h1 class="title">Crop Insurance Request</h1>
+    </div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+    <div class="card" style="margin:auto;width:50%">
+      <div class="item item-text-wrap">
+        <button class="pull-right btn btn-primary" type="button">
+  Balance <span class="glyphicon glyphicon-btc">4</span>
+</button>
+        <!--<h1 class="text-center">Crop Insurance</h1>-->
+
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <!--<h3>You have <span class="black"><span id="balance"></span> META</span></h3>-->
+
+
+        <label class="item item-input item-stacked-label">
+    <span class="input-label">First Name</span>
+    <input type="text" placeholder="John">
+  </label>
+        <label class="item item-input item-stacked-label">
+    <span class="input-label">Last Name</span>
+    <input type="text" placeholder="Suhr">
+  </label>
+        <label class="item item-input item-stacked-label">
+    <span class="input-label">Email</span>
+    <input type="text" placeholder="john@suhr.com">
+  </label>
+        <label class="item item-input item-stacked-label">
+    <span class="input-label">Farm Address</span>
+    <input type="text" placeholder="john@suhr.com">
+  </label>
+        <button class="button button-positive">
+  button-stable
+</button>
+        <label class="item item-input item-select">
+    <div class="input-label">
+      Crop Type
+    </div>
+    <select>
+      <option>Oranges</option>
+      <option selected>Soy Beans</option>
+      <option>Grapes</option>
+    </select>
+  </label>
+        <label class="item item-input item-select">
+    <div class="input-label">
+      Crop Year
+    </div>
+    <select>
+      <option>2018</option>
+      <option selected>2017</option>
+    </select>
+  </label>
+        <div class="item range range-positive">
+          <i class="icon ion-ios-sunny-outline"></i>
+          <input type="range" name="volume" min="0" max="100" value="33">
+          <i class="icon ion-ios-sunny"></i>
+        </div>
+        <p></p>
+        <div class="text-center">
+
+          <button type="button" class=" btn btn-info">Submit</button>
+        </div>
+
+      </div>
+    </div>
+  <!--</div>-->
+
+
+
+  <br>
+  <h1>Send</h1>
+  <br><label for="amount">Amount:</label><input type="text" id="amount" placeholder="e.g., 95"></input>
+  <br><label for="receiver">To Address:</label><input type="text" id="receiver" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
+  <br><br><button id="send" onclick="sendCoin()">Send MetaCoin</button>
+  <br><br>
+  <span id="status"></span>
+</body>
+
+<!--
+Notes:
+/Users/faeezshaikh/git/hackathon/app/stylesheets
+cp ionicons.* ../../build/-->
+
+</html>
