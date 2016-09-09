@@ -4,6 +4,9 @@ module.exports = {
     "app.js": [
       "javascripts/app.js"
     ],
+      "angular.min.js": [
+      "javascripts/angular.min.js"
+    ],
     //  "jquery-3.1.0.min.js": [
     //   "javascripts/jquery-3.1.0.min.js"
     // ],

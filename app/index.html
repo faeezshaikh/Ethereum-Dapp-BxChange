@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
 
 <head>
   <title>MetaCoin - Default Truffle App</title>
@@ -11,12 +11,13 @@
   <link rel="stylesheet" href="./ionic.app.css">
 
   <!--<script src="./jquery-3.1.0.min.js"></script>-->
+  <script src="./angular.min.js"></script>
   <script src="./ionic.bundle.js"></script>
   <!--<script src="./bootstrap.min.js"></script>-->
 </head>
 
-<body style="background-color: #f7f7f7;">
-  <!--<div class="list">-->
+<body style="background-color: #f7f7f7;" ng-controller="BlockChainController" >
+  
   <div class="bar bar-header bar-positive">
     <h1 class="title">Crop Insurance Request</h1>
   </div>
@@ -25,52 +26,55 @@
 
   <div class="list card" style="margin:auto;width:70%">
     <div class="item item-divider item-avatar">
-    <img src="https://avatars2.githubusercontent.com/u/3466845?v=3&s=460">
-    <div class="row">
-      <div class="col-80"> <h2>Marty McFly</h2>
-    <p>0xd380930e0a695c6f106ae1ca4d2e62763eb084ce</p></div>
-      <div class="col-20"><button class="button button-royal pull-right ">
+      <img src="https://avatars2.githubusercontent.com/u/3466845?v=3&s=460">
+      <div class="row">
+        <div class="col-80">
+          <h2>Marty McFly</h2>
+          <p>0xd380930e0a695c6f106ae1ca4d2e62763eb084ce</p>
+        </div>
+        <div class="col-20"><button class="button button-royal pull-right ">
           Balance: <i class="ion ion-social-bitcoin">&nbsp;66</i>
 </button></div>
-    </div>
-   
+      </div>
 
-    
-  </div>
+
+
+    </div>
     <div class="item item-body item-text-wrap">
       <!--<h3>You have <span class="black"><span id="balance"></span> META</span></h3>-->
 
-<div class="row">
-  <div class="col">
-    <label class="item item-input item-stacked-label">
+      <div class="row">
+
+        <div class="col">
+          <label class="item item-input item-stacked-label">
     <span class="input-label">First Name</span>
-    <input type="text" placeholder="John">
+    <input type="text" placeholder="Faeez">
   </label>
-  </div>
-  <div class="col">
-     <label class="item item-input item-stacked-label">
+        </div>
+        <div class="col">
+          <label class="item item-input item-stacked-label">
     <span class="input-label">Last Name</span>
     <input type="text" placeholder="Shaikh">
   </label>
-  </div>
-</div>
-      
-     
+        </div>
+      </div>
+
+
       <label class="item item-input item-stacked-label">
     <span class="input-label">Email</span>
-    <input type="text" placeholder="john@suhr.com">
+    <input type="text" placeholder="faeez.shaikh@gmail.com">
   </label>
       <label class="item item-input item-stacked-label">
     <span class="input-label">Farm Address</span>
-    <input type="text" placeholder="john@suhr.com">
+    <input type="text" placeholder="1901 Chauteau Ave. St. Louis MO 63101">
   </label>
       <label class="item item-input item-select">
     <div class="input-label">
       Crop Type
     </div>
     <select>
-      <option>Oranges</option>
       <option selected>Soy Beans</option>
+      <option>Oranges</option>
       <option>Grapes</option>
     </select>
   </label>
@@ -79,62 +83,108 @@
       Crop Year
     </div>
     <select>
-      <option>2018</option>
       <option selected>2017</option>
+      <option>2018</option>
     </select>
   </label>
       <label class="item item-input item-stacked-label">
     <span class="input-label">Acerage </span>
-    <input type="text" placeholder="10,000 acres">
+    <input type="number" placeholder="10,000 acres" ng-model="acerage" >
   </label>
       <div class="item range range-positive">
-        <i class="icon ion-ios-sunny-outline"></i>
-        <input type="range" name="volume" min="0" max="100" value="33">
-        <i class="icon ion-ios-sunny"></i>
-      </div>
-<div class="row">
-    <div class="col">
-      <label class="item item-input">
-    <span class="input-label">Coverage</span>
-    <span >$$$$</span>
-  </label>
-    </div>
-    <div class="col">
-        <label class="item item-input">
-    <span class="input-label">Password</span>
-    <span >####</span>
-  </label>
-    </div>
+        <!--<label class="item item-input item-stacked-label">-->
+        <span class="input-label">Yield Coverage: {{value}}%</span>
+        <i class="icon ion-ios-sunny-outline"></i>25%
+        <input type="range" min="25" max="100" value="40" step="5" ng-model="value" ng-change="onRangeChange()">
 
-</div>
-      
+        <i class="icon ion-ios-sunny"></i>100%
+        <!--</label>-->
+      </div>
+      <div class="row">
+        <div class="col">
+          <label class="item item-input">
+    <span class="input-label">Coverage ($):</span>
+    <span >{{coverage}}</span>
+  </label>
+        </div>
+        <div class="col">
+          <label class="item item-input">
+    <span class="input-label">Cost ($) :</span>
+    <span>{{cost}}</span>
+  </label>
+        </div>
+
+      </div>
+
 
 
 
       <p></p>
       <div class="text-center">
-          <div class="row">
+        <div class="row">
 
-            <div class="col"> <button type="button" class=" button button-block button-positive">Submit</button></div>
-            <div class="col"><button type="button" class=" button button-block button-assertive">Cancel</button></div>
-          </div>
-       
-        
+          <div class="col"> <button type="button" ng-click="openModal()" class=" button button-block button-positive">Submit</button></div>
+          <div class="col"><button type="button" class=" button button-block button-assertive">Cancel</button></div>
+        </div>
+
+
       </div>
 
     </div>
   </div>
+  <br>
+
   <!--</div>-->
 
+  <!--DO NOT REMOVE the BELOW COMMENTED CODE-->
 
-
-  <br>
+  <!--<br>
   <h1>Send</h1>
   <br><label for="amount">Amount:</label><input type="text" id="amount" placeholder="e.g., 95"></input>
   <br><label for="receiver">To Address:</label><input type="text" id="receiver" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
   <br><br><button id="send" onclick="sendCoin()">Send MetaCoin</button>
   <br><br>
-  <span id="status"></span>
+  <span id="status"></span>-->
+
+  <script type="text/javascript">
+// angular.module('myApp', ['ionic'])
+      function BlockChainController($scope) {
+// .controller("BlockChainController", function($scope,$ionicModal) {
+         $scope.value = "40";
+        //  $scope.acerage = 0;
+         $scope.coverage = 0;
+         $scope.cost = 0;
+
+	 $scope.onRangeChange = function() {
+     var coveragePercent = $scope.value/100;
+     if($scope.acerage) {
+
+     $scope.coverage = 10 * coveragePercent * $scope.acerage;
+     $scope.cost = 1.25 * coveragePercent * $scope.acerage;
+     } else {
+       $scope.cost = $scope.coverage = "Enter Acerage";
+     }
+     console.log('Range changed',$scope.value);
+     
+   }
+
+
+//  $scope.openModal = function() {
+//     $scope.modal.show();
+//   };
+//   $scope.closeModal = function() {
+//     $scope.modal.hide();
+//   };
+
+//    $ionicModal.fromTemplateUrl('modal.html', {
+//     scope: $scope,
+//     animation: 'slide-in-up'
+//   }).then(function(modal) {
+//     $scope.modal = modal;
+//   });
+      }
+  </script>
+
 </body>
 
 <!--

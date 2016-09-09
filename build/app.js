@@ -43898,7 +43898,7 @@ window.addEventListener('load', function() {
 
                                                                 
 
-  [ConvertLib,MetaCoin,Migrations].forEach(function(contract) {         
+  [MetaCoin,ConvertLib,Migrations].forEach(function(contract) {         
 
     contract.setProvider(window.web3.currentProvider);          
 
@@ -43964,4 +43964,6 @@ window.onload = function() {
 
     refreshBalance();
   });
+
+  
 }
