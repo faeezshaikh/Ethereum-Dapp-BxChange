@@ -17,46 +17,56 @@
   <!--<script src="./bootstrap.min.js"></script>-->
 </head>
 
-<body>
+<body style="background-color: #f7f7f7;">
   <!--<div class="list">-->
-    <div class="bar bar-header bar-positive">
-      <h1 class="title">Crop Insurance Request</h1>
+  <div class="bar bar-header bar-positive">
+    <h1 class="title">Crop Insurance Request</h1>
+  </div>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+
+  <div class="list card" style="margin:auto;width:70%">
+    <div class="item item-divider item-avatar">
+    <img src="https://avatars2.githubusercontent.com/u/3466845?v=3&s=460">
+    <div class="row">
+      <div class="col-80"> <h2>Marty McFly</h2>
+    <p>0xd380930e0a695c6f106ae1ca4d2e62763eb084ce</p></div>
+      <div class="col-20"><button class="button button-royal pull-right ">
+          Balance: <i class="ion ion-social-bitcoin">&nbsp;66</i>
+</button></div>
     </div>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
+   
 
-    <div class="card" style="margin:auto;width:50%">
-      <div class="item item-text-wrap">
-        <button class="pull-right btn btn-primary" type="button">
-  Balance <span class="glyphicon glyphicon-btc">4</span>
-</button>
-        <!--<h1 class="text-center">Crop Insurance</h1>-->
+    
+  </div>
+    <div class="item item-body item-text-wrap">
+      <!--<h3>You have <span class="black"><span id="balance"></span> META</span></h3>-->
 
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <!--<h3>You have <span class="black"><span id="balance"></span> META</span></h3>-->
-
-
-        <label class="item item-input item-stacked-label">
+<div class="row">
+  <div class="col">
+    <label class="item item-input item-stacked-label">
     <span class="input-label">First Name</span>
     <input type="text" placeholder="John">
   </label>
-        <label class="item item-input item-stacked-label">
+  </div>
+  <div class="col">
+     <label class="item item-input item-stacked-label">
     <span class="input-label">Last Name</span>
-    <input type="text" placeholder="Suhr">
+    <input type="text" placeholder="Shaikh">
   </label>
-        <label class="item item-input item-stacked-label">
+  </div>
+</div>
+      
+     
+      <label class="item item-input item-stacked-label">
     <span class="input-label">Email</span>
     <input type="text" placeholder="john@suhr.com">
   </label>
-        <label class="item item-input item-stacked-label">
+      <label class="item item-input item-stacked-label">
     <span class="input-label">Farm Address</span>
     <input type="text" placeholder="john@suhr.com">
   </label>
-        <button class="button button-positive">
-  button-stable
-</button>
-        <label class="item item-input item-select">
+      <label class="item item-input item-select">
     <div class="input-label">
       Crop Type
     </div>
@@ -66,7 +76,7 @@
       <option>Grapes</option>
     </select>
   </label>
-        <label class="item item-input item-select">
+      <label class="item item-input item-select">
     <div class="input-label">
       Crop Year
     </div>
@@ -75,19 +85,47 @@
       <option selected>2017</option>
     </select>
   </label>
-        <div class="item range range-positive">
-          <i class="icon ion-ios-sunny-outline"></i>
-          <input type="range" name="volume" min="0" max="100" value="33">
-          <i class="icon ion-ios-sunny"></i>
-        </div>
-        <p></p>
-        <div class="text-center">
-
-          <button type="button" class=" btn btn-info">Submit</button>
-        </div>
-
+      <label class="item item-input item-stacked-label">
+    <span class="input-label">Acerage </span>
+    <input type="text" placeholder="10,000 acres">
+  </label>
+      <div class="item range range-positive">
+        <i class="icon ion-ios-sunny-outline"></i>
+        <input type="range" name="volume" min="0" max="100" value="33">
+        <i class="icon ion-ios-sunny"></i>
       </div>
+<div class="row">
+    <div class="col">
+      <label class="item item-input">
+    <span class="input-label">Coverage</span>
+    <span >$$$$</span>
+  </label>
     </div>
+    <div class="col">
+        <label class="item item-input">
+    <span class="input-label">Password</span>
+    <span >####</span>
+  </label>
+    </div>
+
+</div>
+      
+
+
+
+      <p></p>
+      <div class="text-center">
+          <div class="row">
+
+            <div class="col"> <button type="button" class=" button button-block button-positive">Submit</button></div>
+            <div class="col"><button type="button" class=" button button-block button-assertive">Cancel</button></div>
+          </div>
+       
+        
+      </div>
+
+    </div>
+  </div>
   <!--</div>-->
 
 
@@ -104,6 +142,7 @@
 <!--
 Notes:
 /Users/faeezshaikh/git/hackathon/app/stylesheets
-cp ionicons.* ../../build/-->
+cp ionicons.* glyphicons*.* ../../build/ 
+-->
 
 </html>

@@ -33,7 +33,7 @@ module.exports = {
     //   "stylesheets/bootstrap-theme.min.css"
     //   ],
     "images/": "images/",
-    "stylesheets/": "stylesheets/"
+    "fonts/": "fonts/"
   },
   rpc: {
     host: "localhost",
