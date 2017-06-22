@@ -2,6 +2,6 @@
 
 Winning Dapp at the RGAx Blockchain Hackathon - September 2016.
 
-For an overview, view this YouTube video :
+For an overview, watch this YouTube video :
 
 https://www.youtube.com/watch?v=FshsIlm_Wkk
